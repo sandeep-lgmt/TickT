@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-audio" src="julia.mp3" autoplay loop></audio>
+
+    
+    <div id="play-container">
+        <h1>Welcome to Tic Tac Toe</h1>
+        <button id="play-button">Play Game</button>
+    </div>
+
+    
+    <div id="game-container" class="hide">
+        <div id="cash-container">
+            <p id="cash-display">Cash: $100</p>
+        </div>
+        <div class="msgcontainer hide">
+            <p id="msg">Winner</p>
+            <button id="new">New Game</button>
+        </div>
+        <main>
+            <h1>TIK TAC TOE</h1>
+            <div class="container">
+                <div class="game">
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                </div>
+            </div>
+            <button id="reset">Reset game</button>
+        </main>
+    </div>
+
+    <script src="tic.js"></script>
+    <script>
+        
+        const playButton = document.getElementById("play-button");
+        const playContainer = document.getElementById("play-container");
+        const gameContainer = document.getElementById("game-container");
+
+        playButton.addEventListener("click", () => {
+            playContainer.classList.add("hide"); 
+            gameContainer.classList.remove("hide"); 
+        });
+    </script>
+</body>
+</html>
